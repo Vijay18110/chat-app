@@ -1,0 +1,14 @@
+const server = require("express");
+const Register = require("../Controllers/UserControllers");
+const Login = require("../Controllers/UserControllers");
+const { saveMsg } = require("../Controllers/msgController");
+const { upload } = require("../middlewares/muter.middleware");
+const { verifyJWT } = require("../middlewares/auth.middleware");
+const router = server.Router();
+router.post("/register", upload.single("file"), Register.Register);
+router.post("/login", Login.Login);
+router.get("/allusers", Register.getData);
+router.post("/send/:id", verifyJWT, saveMsg);
+router.post("/logout", Register.logout);
+router.post("/getmsg/:id", verifyJWT, Register.getAllMsg);
+exports.router = router;

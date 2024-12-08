@@ -1,0 +1,52 @@
+.chatCont{
+background-color:white;
+width: 100vw;
+text-transform: capitalize;
+}
+.header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 2rem;
+padding: 10px;
+z-index: 4;
+position: sticky;
+top: 0;
+color: rgb(20, 18, 18);
+background-color: white;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.username{
+display: flex;
+column-gap: 10px;
+}
+.userlist{
+    width: 80vw;
+    margin: 0 auto;
+overflow-y: scroll;
+    display: flex;
+    margin-top: 20px;
+flex-direction: column;
+}
+.heading{
+font-size: 1.5rem;
+color: rgb(20, 18, 18);
+}
+.userCont{
+margin-top: 20px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+}
+.noUser{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80vh;
+}
+.noUser>span{
+color: black;
+font-size: 3rem;
+text-transform: capitalize;
+}
